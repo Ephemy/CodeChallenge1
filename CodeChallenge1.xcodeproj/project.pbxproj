@@ -14,6 +14,7 @@
 		7B34AB6819F9A0BF002D756A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B34AB6719F9A0BF002D756A /* Images.xcassets */; };
 		7B34AB6B19F9A0BF002D756A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B34AB6919F9A0BF002D756A /* LaunchScreen.xib */; };
 		7B34AB7719F9A0BF002D756A /* CodeChallenge1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34AB7619F9A0BF002D756A /* CodeChallenge1Tests.m */; };
+		7B34AB8219F9A8FD002D756A /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B34AB8119F9A8FD002D756A /* webViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		7B34AB7019F9A0BF002D756A /* CodeChallenge1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B34AB7519F9A0BF002D756A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B34AB7619F9A0BF002D756A /* CodeChallenge1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeChallenge1Tests.m; sourceTree = "<group>"; };
+		7B34AB8019F9A8FD002D756A /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
+		7B34AB8119F9A8FD002D756A /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				7B34AB6119F9A0BF002D756A /* ViewController.h */,
 				7B34AB6219F9A0BF002D756A /* ViewController.m */,
 				7B34AB6419F9A0BF002D756A /* Main.storyboard */,
+				7B34AB8019F9A8FD002D756A /* webViewController.h */,
+				7B34AB8119F9A8FD002D756A /* webViewController.m */,
 				7B34AB6719F9A0BF002D756A /* Images.xcassets */,
 				7B34AB6919F9A0BF002D756A /* LaunchScreen.xib */,
 				7B34AB5A19F9A0BF002D756A /* Supporting Files */,
@@ -222,6 +227,7 @@
 				7B34AB6319F9A0BF002D756A /* ViewController.m in Sources */,
 				7B34AB6019F9A0BF002D756A /* AppDelegate.m in Sources */,
 				7B34AB5D19F9A0BF002D756A /* main.m in Sources */,
+				7B34AB8219F9A8FD002D756A /* webViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
