@@ -11,6 +11,7 @@
 @interface webViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     self.navTitle.title = self.inheritedNavTitle;
     self.webView.delegate = self;
-    NSURL *url = [NSURL URLWithString:@"http://www.google.com"];
+    NSURL *url = [NSURL URLWithString:@"http://mobilemakers.co"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     
@@ -34,7 +35,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    [self.activityIndicator startAnimating];
+}
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.activityIndicator stopAnimating];}
 /*
 #pragma mark - Navigation
 

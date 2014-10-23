@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webButton.userInteractionEnabled = NO;
     // Do any additional setup after loading the view, typically from a nib.
 }
 

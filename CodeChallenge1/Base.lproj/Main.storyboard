@@ -17,13 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-5g-Mfa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-5g-Mfa">
                                 <rect key="frame" x="155" y="135" width="9" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cil-TU-ONh" userLabel="multiplier">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cil-TU-ONh" userLabel="multiplier">
                                 <rect key="frame" x="196" y="132" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -31,7 +31,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3Sz-Lv-ucA"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjj-n3-Dyq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjj-n3-Dyq">
                                 <rect key="frame" x="137" y="269" width="65" height="30"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,7 +40,7 @@
                                     <action selector="onCalculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOk-gD-1iS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gj-Vw-U3h" userLabel="multiplicand">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gj-Vw-U3h" userLabel="multiplicand">
                                 <rect key="frame" x="32" y="132" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -50,6 +50,16 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6gj-Vw-U3h" secondAttribute="bottom" constant="406" id="2KF-GH-nhw"/>
+                            <constraint firstItem="6gj-Vw-U3h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="2oi-ud-Eg4"/>
+                            <constraint firstItem="ELE-5g-Mfa" firstAttribute="leading" secondItem="6gj-Vw-U3h" secondAttribute="trailing" constant="26" id="8ut-Mg-qfT"/>
+                            <constraint firstItem="6gj-Vw-U3h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="Qgq-gI-4KY"/>
+                            <constraint firstItem="Bjj-n3-Dyq" firstAttribute="top" secondItem="cil-TU-ONh" secondAttribute="bottom" constant="107" id="bBZ-xH-joL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bjj-n3-Dyq" secondAttribute="trailing" constant="102" id="foz-bT-KSc"/>
+                            <constraint firstItem="Bjj-n3-Dyq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121" id="pAl-tE-1vi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bjj-n3-Dyq" secondAttribute="bottom" constant="269" id="tyj-cF-Az9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Answer" id="cKY-qO-KeH">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Yb1-Hc-2Pj">
@@ -91,8 +101,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecJ-vW-OTr">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="beM-g0-bDI">
+                                <rect key="frame" x="34" y="83" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecJ-vW-OTr">
+                                <rect key="frame" x="9" y="146" width="320" height="428"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="A20-Wh-yG9"/>
@@ -102,6 +115,9 @@
                                     <outlet property="delegate" destination="oOW-Sg-Ild" id="Zsk-oZ-phw"/>
                                 </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rIN-Ia-Lmx">
+                                <rect key="frame" x="150" y="101" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -111,6 +127,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="GFY-p2-QS2"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="rIN-Ia-Lmx" id="hLa-wH-yuJ"/>
                         <outlet property="navTitle" destination="GFY-p2-QS2" id="soh-Hg-nRp"/>
                         <outlet property="webView" destination="ecJ-vW-OTr" id="INe-B1-Yte"/>
                     </connections>
